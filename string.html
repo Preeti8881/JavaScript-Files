@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        let a="web";
+        let b='web';
+        let c=`web`;
+
+        let ename="RAMU";
+        let empid=120;
+        let sal=2000;
+        console.log(`The employee name ${ename} with the id of ${empid} having salary of ${sal}`);//${}-->interpolation
+
+        let str1='"hello"';
+        console.log(str1);//hello
+
+        let str2="'hello'";
+        console.log(str2);//hello
+
+        let str3="`hi`";
+        console.log(str3);//hi
+
+        // string methods(V V Imp) (interview point)
+
+        let myVar="guys plzz prepareu apti otherwise hogee";
+        console.log(myVar.length); //to check the length of string
+
+        console.log(myVar.charAt(7));//to see the character at the index of 7
+        console.log(myVar.indexOf('u'));//gives the index of character s
+        console.log(myVar.concat(" Definetly"),(123));//it will concat the n number of string
+         
+
+        let myStd="are awesome";
+        console.log(myStd.includes('a'));//it checks the characters present in the string if it is present gives true or else false
+
+        console.log(myStd.slice(2,7));//it takes one or two arguments and if two rguments are there it includes first one and excludes second one
+        console.log(myStd.split(""));
+        console.log(myStd.split("").reverse());
+        console.log(myStd.split("").reverse("").join(""));
+
+        //spilt-->"converts string into an array"
+        //reverse-->"reverse a string"
+        //join-->"converts array into string"
+
+        let aB="racaecar";
+        console.log(aB.split("").reverse().join(""));
+
+        console.log(aB.slice(4));//ondu tagondre adunna include maadi u;ididu
+
+       // console.log(aB.reverse().join(""));//we can not take directly reverse
+
+       console.log(aB.lastIndexOf('a'));//it will search last index of in string
+       console.log(aB.indexOf('a'));//it will search first idex of a
+
+
+       let demo='     hi     ';
+       console.log(demo);
+
+      console.log(demo.trim(""));
+      console.log(demo.trimStart(""));//if we want remove white space at the start
+      console.log(demo.trimEnd(""));//if we want to remove white space at end
+      console.log(demo.trimRight(""));
+
+      let test='7';
+      console.log(test.padStart(3,"hi"));//starts zero
+
+      console.log(test.padEnd(3,"0"));//ends with zeros 
+
+      console.log(test.padStart(9,"5"));
+
+      console.log(test.padStart(1,"5"));
+
+      console.log(test.padEnd(2,"5"));
+
+
+      console.log(test.padEnd(9,"8"));
+
+      let d="kellok";
+      console.log(d.replace('k','hello'));//by replace of k with h  and it will take first matching
+
+      let m='hello';
+      console.log(m[0]='k');  //immutable it will not change 
+      console.log(m);
+
+      let str5='good moring';
+      console.log(str5.endsWith('g')); ///true  checking the characters in last
+      console.log(str5.endsWith('x'));//false
+
+      console.log(str5.startsWith('g'));//true checking the characters in first
+      console.log(str5.startsWith('m'));//false
+
+     //Boolean
+
+     let varBoolean="true";
+     console.log(varBoolean,typeof varBoolean);
+
+
+     let varBoolean1=true;
+     console.log(varBoolean1,typeof varBoolean1);
+
+
+
+     let varBoolean2=false;
+     console.log(varBoolean2,typeof varBoolean2);
+
+     let varBoolean3=Boolean("true");
+     console.log(varBoolean3,typeof varBoolean3);
+
+     let varBoolean4=Boolean("-true");
+     console.log(varBoolean4,typeof varBoolean4);
+
+     
+     let varBoolean5=Boolean(-0.23);
+     console.log(varBoolean5,typeof varBoolean5);
+
+     //note-->apart from 0 all are true in boolean
+     //to store big value
+     //bigint
+     //the number data type will store the value until 1.797693*10 raise to 308
+
+
+     //how to represent the big int by 'n
+     let h=1n;
+     console.log(h,typeof h);
+
+     let bigNum=10045456464644646446446464464464n;
+     console.log(bigNum,typeof bigNum);
+
+     let bigNum1=BigInt(1);
+     console.log(bigNum1,typeof bigNum1);//at the last add n
+     
+     //we cant convrt string to num|||--->     // let bigNum1=BigInt("hi");
+                                                //console.log(bigNum1,typeof bigNum1); //errror
+     let bigNum2=BigInt("35");
+     console.log(bigNum2,typeof bigNum2);
+
+     let bigNum3=BigInt(true);
+     console.log(bigNum3,typeof bigNum3); //boolen to bigint
+
+    //  let bigNum4=BigInt(null);
+    //  console.log(bigNum4,typeof bigNum4); //we caant use null
+
+    //undefined
+    // a variable does not have any value or missing an initialization
+
+    var purColor;
+    console.log(purColor, typeof(purColor));
+
+    // var purColor=undefined(1); //not possible
+    // console.log(purColor);
+
+    // var purColor=undefined(true); //not possible
+    // console.log(purColor);
+
+    // var purColor=undefined("hi") //not possible
+    // console.log(purColor);
+
+
+    //Null
+
+    let age=null;
+    console.log(age,typeof age); //null 
+
+    //null is an error or bug ==> bczz null is primitive data type the type of null is an object,object is non- primitive 
+
+    // let age1=null(1);
+    // console.log(age1,typeof null);//error
+
+    // let age2=null(0);
+    // console.log(age2,typeof null);//error
+
+    let age3=Number(null);
+    console.log(age3);
+    console.log(null+1);
+
+    
+    let age4=String(null);
+    console.log(age4);
+
+    
+    let age5=Boolean(null);
+    console.log(age5);
+
+    
+    // let age6=BigInt(null); //we cant convert
+    // console.log(age6);
+
+    
+    let age7=BigInt(0);
+    console.log(age7);//0n
+
+    
+    let age8=BigInt(1);
+    console.log(age8);//1n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>

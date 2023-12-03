@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+    <script>
+        //creating object in literal way
+        // in Javascript all the data is stored in the form of objects or in the object
+        // let myObj={
+        //     id:40,
+        //     name:"Preeti",
+        //     salary:30000,
+        //     place:"gulbarga"
+        // }
+        // console.log(myObj);
+        // //fetching a value of object
+        // console.log(myObj.salary);
+
+        // //updating the value of object
+        // console.log(myObj.salary=100000);
+        // console.log(myObj);
+
+        // //adding key and value pair for the existing Object
+        // console.log(myObj.number=9900563764);
+        // console.log(myObj); 
+
+        // //deleting an key and value pair from an existing object
+        // delete myObj["place"];
+        // console.log(myObj);
+
+        //why primitive is called immutable or object de-referencing, primitive is not pointing to any address
+        let num=122;
+        let num1=num;
+        num=123;
+        console.log(num1);//122
+        console.log(num);//123
+
+        //why non-primitive is called mutable or object referencing
+        let obj122={
+            bottle:"1ltr",
+            color:"purple"
+        }
+        let obj123=obj122;
+        obj122.color="red"
+        console.log(obj122);
+        console.log(obj123);
+
+        //creating object inside object
+        let myObj1={
+            name:"gayu",
+            age:21,
+            color:"green",
+            computer:{
+                ram:"4gb",
+                color:"grey",
+                height:5
+            }
+        }
+        //fetch
+        //dot notation
+        console.log(myObj1.computer.color);//grey
+
+        //array notation
+        console.log(myObj1["computer"]["color"]);
+
+        //update
+        console.log(myObj1.computer.ram="5gb");
+
+        //object methods v v imp
+        //1.assign
+        //2.freeze
+        //3.key
+        //4.value
+        //5.entries
+
+        //1.assign-assign object is used to collect all the key and value pairs of different object in a single object
+        // OR assign object is assigning all the key and value pairs in a single object
+
+        let clgObj={
+            place:"bangalore",
+            strength:1000
+        }
+        let sclObj={
+            place:"davangere",
+            strength:2000
+        }
+        let asgnObj=Object.assign([sclObj,clgObj]);
+        console.log(asgnObj);
+
+        //freeze-At some time I dont want to change the value
+        //freeze is used to stop the updating the value of an object at some period of time
+        sclObj.place="hubli";
+        console.log(sclObj);
+        sclObj.place="zimbabwe";
+        console.log(sclObj);
+
+        let freezeObj=Object.freeze(sclObj);
+        sclObj.place="uganda"
+        console.log(freezeObj);
+
+        //key
+        let keyObj=Object.keys(sclObj);
+        console.log(keyObj);
+
+        //value
+        let valueObj=Object.values(sclObj);
+        console.log(valueObj);
+
+        //fetching the key and value using for loop
+        //for-in-loop(fetching the keys of an object)
+        for(let key in sclObj)
+        {
+            console.log(key);
+        }
+        //to get the values of object
+        for(let key in sclObj)
+        {
+            console.log(sclObj[key]);
+        }
+        
+        //entries
+        //when we want to convert object to array we need entries
+        let entObj=Object.entries(sclObj);
+        console.log(entObj);
+
+
+        let object={
+        firstName:"Shubman Gill",
+        age:24,
+        details:function(){
+            let place="Punjab";
+            console.log(place);
+        },
+        };
+        console.log(object);
+        console.log(object.details());
+        
+
+        let object1={
+        firstName:"Shubman Gill",
+        age:24,
+        details1:function(){
+            let place="Jamaica";
+            console.log(place);
+        },
+        };
+        console.log(object1);
+        console.log(object1.details1());
+
+      //how to prove var is global
+        var comp=1000;
+        console.log(window.comp);//1000
+        console.log(window);
+
+        let comp1=1000;
+        console.log(window.comp1);//Undefined
+        console.log(window);
+
+        const comp2=1000;
+        console.log(window.comp2);//Undefined
+        console.log(window);
+
+
+
+        let myObj={
+         things:"chair",
+         sports:function() {},
+        };
+        console.log(myObj);
+        
+        
+
+
+    </script>
+</body>
+</html>

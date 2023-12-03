@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" onsubmit="return formValidation()">
+        <!-- /return keyword is for return any wrong or right value in the js to the form/ -->
+        <table>
+            <tr>
+                <td>
+                    <label for="username">Username</label>
+                </td>
+                <td>
+                  <input type="text" id="username" name="username"><span id="user1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password</label>
+                </td>
+                <td>
+                  <input type="password" id="password" name="password"><span id="pass1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cpassword">Confirm password</label>
+                </td>
+                <td>
+                  <input type="password" id="cpassword" name="cpassword"><span id="cpass1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mnum">Mobile Number</label>
+                </td>
+                <td>
+                  <input type="number" id="mnum" name="mnum"><span id="mnum1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mailid">Email-ID</label>
+                </td>
+                <td>
+                  <input type="email" id="mailid" name="mailid"><span id="mailid1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+                <td>
+                    <button type="cancel">Cancel</button>
+
+                </td>
+             
+            </tr>
+        </table>
+    </form>
+
+
+
+    <script src="formvalidation.js"></script>
+</body>
+</html>

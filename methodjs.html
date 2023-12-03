@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Query Selector -->
+    <!-- QS returns the object when it target the first element of target Selector
+    QS uses CSS symbol like #-->
+
+    <section class="test">I am First Section</section>
+
+    <section class="test">I am Second Section</section>
+    <section class="test">I am Second Section</section>
+
+    <section class="test">I am Second Section</section>
+
+
+
+
+    <script>
+        // get element by tag name-When u r targetting the element which is not present in html it will give collection 
+        //get element by class,query,queryselector all-Empty(node list)
+        //get element by id-null
+        let d=document.querySelectorAll('.test');
+        console.log(d);
+
+        let queryS=document.querySelector('.test');
+        console.log(queryS);
+        queryS.innerText="It is changed";
+        // queryS.style.color="blue";
+        // queryS.style.fontSize="100px";
+
+
+        let allQuery=document.querySelectorAll('.test');
+        console.log(allQuery);
+        allQuery[0].style.backgroundColor="red";
+        allQuery[0].innerHTML="heading";
+
+        //Creating Element
+        let createEle=document.createElement('h1');
+        console.log(createEle);
+        let createEle1=document.createElement('div');
+        console.log(createEle1);
+        createEle.innerText="Yes I am heading one";
+
+        createEle1.innerText="Yes I am div";
+        //createEle.innerText="Yes I am heading one";
+
+
+        //append and appendchild
+       
+       
+        //appendChild in as JS method
+        //appendChild takes an element as an argument(as its last child)to insert on another element
+        //it takes only one element
+        //it does not takes string as an argument
+
+        
+        createEle.appendChild(createEle1);
+        console.log(document.body.appendChild(createEle));
+        //document.body.appendChild(createEle)
+
+        //append
+        //append in an JS method 
+        //append takes an 'n' no of elements to insert on another element
+        //it takes string as an argument
+
+        let div1=document.createElement('h2');
+        console.log(div1);
+        div1.innerText="I am heading two"
+        let div2=document.createElement('aside');
+        console.log(div2);
+        div2.innerText="I am aside tag"
+        document.body.append(div1,div2);
+        //
+        </script>
+</body>
+</html>

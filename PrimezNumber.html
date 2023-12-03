@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // for(let j=2;j<=100;j++){
+        // let number=j;
+        // let isPrime=true;
+        
+        // for(let i=2;i<number;i++)
+        // {
+        //     if(number%i==0)
+        //     {
+        //         isPrime=false;
+        //         break;
+        //     }
+        // }
+        // if(isPrime)
+        // {
+        //     console.log(`Prime is ${number}`);
+        // }
+        // }
+
+        function reverseString(str)
+        {
+          let rev="";
+          for(let i=str.length-1;i>=0;i--){
+            rev=rev+str[i];
+
+          }
+           return rev;
+         }
+         let string=prompt(`enter the string`);
+         let res=reverseString(string);
+         console.log(res);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #boxes{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Task 2 -->
+    <table>
+        <tr>
+            <td>
+                <label for="">Color: </label>
+            </td>
+            <td>
+                <input type="text" id="color">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="">Count: </label>
+            </td>
+            <td>
+                <input type="text" id="count">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btn">Submit</button>
+            </td>
+        </tr>
+    </table>
+    <div id="boxes"></div>
+    <script>
+        let btn=document.getElementById("btn");
+        btn.addEventListener('click',()=>{
+            let color=document.getElementById("color").value;
+            let count=document.getElementById("count").value;
+            for(let i=0;i<count;i++)
+            {
+                let box=document.createElement("div");
+                box.style.height="100px";
+                box.style.width="100px";
+                box.style.border="5px solid black"
+                box.style.backgroundColor=color;
+                document.body.append(box)
+            }
+        })
+    </script>
+
+    
+
+
+    <!-- <script src="assign.js"></script> -->
+</body>
+</html>

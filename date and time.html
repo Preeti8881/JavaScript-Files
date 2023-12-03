@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+  
+  
+  
+  <script>
+    let d=new Date();
+    console.log(d);//current date
+
+    let d1=new Date(24*60*60*3000);
+    console.log(d1);
+
+    let d2=new Date(-24*60*60*3000);
+    console.log(d2);
+
+    //passing string to an date object
+    let d3=new Date("1999-12-3 04:34:30");
+    console.log(d3);
+
+    let now=new Date();
+    console.log(now.getDate());
+    console.log(now.getFullYear());
+    console.log(now.getDay());
+    console.log(now.get());
+
+
+    let a=["jan","feb"];
+    console.log(a[0]);
+
+    console.log(now.getMinutes());
+    console.log(now.getSeconds());
+
+    //from 1970 jan 1 onwards till today date milliseconds
+    console.log(now.getTime());
+
+    //year,month,date,day,hour,min,seconds
+
+    let date=new Date(2020,2,20,2,24,30,30)
+    let todaydate=new Date(2023,8,14,4,9,45,50)
+    console.log(date);
+    console.log(todaydate);
+   
+    //we are adding 14 seconds for the jan 01 1970 onwards
+    let date1=new Date(14000);
+    console.log(date1);
+
+    //by default the date is 1 and min,sec,hrs are zero
+    let date2=new Date(2022,11);
+    console.log(date2);
+
+    now.setFullYear(2024);
+    now.setMonth(3);
+    now.setDate(11);
+    now.setHours(20);
+    now.setMinutes(25);
+    now.setSeconds(40);
+    console.log(now);
+
+    // log(max(10,20,'50',40,'2'))//NAN
+    // console.log(2==2);//true
+    // console.log(2===2);//true
+    // console.log("2"==2);//true
+    // console.log("2===2");//false
+
+    // ==[check the value]
+    // ===[checks both values and datatype]
+
+  </script>  
+</body>
+</html>

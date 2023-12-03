@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        //    let p=new Promise(function(resolve,reject){
+        //        //resolve("I am fulfilled")
+        //        reject("something went wrong")
+        //    });
+        //    console.log(p);
+
+
+
+
+
+
+    //     function demo()
+    //     {
+    //        return new Promise(function(resolve,reject)
+    //        {
+    //             //resolve("I am resolved")
+    //             reject("i am rejected")
+    //            // resolve("I am resolved")
+                
+    //        })
+    //     }
+    //    let c= demo();
+    //    console.log(c);
+
+    //    c.then(function(data){
+    //     console.log(data);
+    //    })
+    //    .catch(function(error){
+    //     console.log(error);
+    //    })
+       
+
+    //settimeout
+    // setTimeout(function(){
+    //     console.log("Hey, I Good Morning");
+    // },6000)
+
+
+    //setInterval
+    // setInterval(function(){
+    //     console.log("hey i am setInterval");
+    // },5000)
+
+//
+// function demo1()
+// {
+
+//   return new Promise((resolve,reject)=>
+//   {
+//     //  reject("hey")
+//      setTimeout(()=>{
+//         reject("I am Rejected")
+//      },1000)
+//   })
+
+// }
+
+// let p=demo1()
+// console.log(p);
+
+// function pass(d){
+// console.log(d);
+// }
+
+// function fail(error){
+//    console.log(error);
+// }
+
+
+// p.then(pass).catch(fail)
+
+
+
+
+
+
+//Laxman sir
+
+    
+ // let b=new Promise(function(resolve,reject){});  // by using constructor //resolve and reject are inbuilt methods          // console.log(b)
+    
+    
+//          function weather()
+//             { 
+//                 return new Promise(function(resolve,reject) {        //resolve is there use then  ,, reject is there use catch
+                                                                 
+//                     resolve("promise is resolve")
+//                 });
+//             }
+//             // let c=weather();
+//             // console.log(c)
+    
+//             weather().then((ab)=>{   
+//                 console.log(ab)
+    
+//             });
+            
+    
+    
+//             //setTimeout
+//             setTimeout(()=>{
+//                  console.log("hlo js")
+//             },2000)
+          
+//             //setTimeInterval
+//             setInterval(() => {
+//                 console.log("hlo parashuram i will handle")
+//             }, 3000);
+    
+    
+//             function weather()
+//             {
+//                 return new Promise((resolve,reject)=>{
+//                setTimeout(()=>{
+//                 reject("HTML");
+//                },1000)
+//             });
+//             }
+    
+            // function onSuccess(data)
+            // {
+            //     console.log("is there")
+            //     console.log(`succes ${data}`);
+            // }
+            // function onfailure(error)
+            // {
+            //     console.log(error);
+            // }
+            // weather().then(onSuccess).catch(onfailure);
+
+
+           //****API Fetching*****
+
+    //        function fetchApi(){
+    //        let pp= fetch(
+    //             "https://dog.ceo/api/breeds/image/random"
+    //         );
+    //         console.log(pp);
+
+    //         let pp1=pp.then(function(data){
+    //           console.log(data);
+    //           return data.json();
+
+    //         });
+        
+
+    //     pp1.then((data1) =>{
+    //         console.log(data1);
+    //     });
+    // }
+    //     fetchApi();
+
+
+        //     function fetchApi()
+        // {
+        //     let promise= fetch(
+        //         "https://www.disify.com/api/email/your@example.com"
+        //     );
+        //     console.log(promise);
+        //     let promise1=promise.then(function (data){
+        //         console.log(data);
+        //         return data.json();
+        //     });
+        //     promise1.then((data1)=>{
+        //         console.log(data1);
+        //     });
+        // }
+        // fetchApi();
+
+
+        fetch("https://www.disify.com/api/email/your@example.com")
+            .then((x) => x.json())
+            .then((y) => console.log(y))
+            .catch((error) => {
+                console.log("can't fetch");
+            });
+
+
+
+
+        
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
